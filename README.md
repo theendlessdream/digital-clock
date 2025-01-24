@@ -7,26 +7,27 @@ Raspberry Pi 1 A+, with micro SD card.
 Wifi USB dongle.
 
 4x Large digit display drivers https://www.sparkfun.com/sparkfun-large-digit-driver.html
-These are TPIC6C596 Power Logic 8-Bit Shift Registers in a castellated PCB. Cheap alternatives to the Sparkfun ones can be
+These are _TPIC6C596 Power Logic 8-Bit Shift Registers_ on a castellated PCB. Cheap alternatives to the Sparkfun ones can be
 found at the usual online retailers.
 
-12v to 5v converted (Car cigarette socket USB charger)
+12 V to 5 V converter (Car cigarette socket USB charger)
 
-Just under 3m of 12v LED strip cut into 10cm lengths.
+Just under 3 m of 12 V LED strip cut into 10 cm lengths.
 
-12v 2A power supply
+12 V, 2 A power supply
 
 ## Wiring
 
 The display drivers are daisy-chained together using the IN and OUT connections.
 
-From the 12v power supply, 12v and GND go to the input of the display drivers. I chose to wire this into the middle of 
-the daisy
-chain.
+From the 12 V power supply, 12 V and GND go to the display drivers. I chose to wire this into the middle of 
+the daisy chain.
 
-Each display driver has connections on the long edge to go to the segments of th digit. They share a common positive 
-connection to 12V, the negative connections from the LEDs go to the segment connections A-G and DP for the flashing 
-colon.
+Each display driver has connections on the long edge to go to the segments of the digit. They share a common positive 
+connection to 12 V, the negative connections for each segment of the digit, and the decimal point, which is used for the
+flashing colon on the clock.
+
+![7_Segment_Display_with_Labeled_Segments.svg](images/7_Segment_Display_with_Labeled_Segments.svg)
 
 From the Raspberry Pi 40 pin header to the first display driver (for the 10s of hours):
 
@@ -36,7 +37,7 @@ From the Raspberry Pi 40 pin header to the first display driver (for the 10s of 
 | SPI0 CE0 (24)      | LAT               |
 | SPI0 SCLK (23)     | CLK               |
 | SPI0 MOSI (19)     | SER               |
-| 5v power (2)       | 5V                |
+| 5V power (2)       | 5V                |
 
 
 ## Software
