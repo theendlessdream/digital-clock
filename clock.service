@@ -1,0 +1,11 @@
+[Unit]
+Description=Digital Clock Service
+After=multi-user.target
+
+[Service]
+ExecStart=/usr/bin/python /home/pi/clock.py
+WorkingDirectory=/home/pi
+User=john
+
+[Install]
+WantedBy=multi-user.target
