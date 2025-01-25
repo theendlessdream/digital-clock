@@ -1,5 +1,7 @@
 # digital-clock
 
+![front.jpg](photos/front.jpg)
+
 ## Hardware Components
 
 Raspberry Pi 1 A+, with micro SD card.
@@ -18,12 +20,14 @@ Just under 3 m of 12 V LED strip cut into 10 cm lengths.
 
 ## Wiring
 
+![wiring.jpg](photos/wiring.jpg)
+
 The display drivers are daisy-chained together using the IN and OUT connections.
 
 From the 12 V power supply, 12 V and GND go to the display drivers. I chose to wire this into the middle of 
 the daisy chain.
 
-Each display driver has connections on the long edge to go to the segments of the digit. They share a common positive 
+Each display driver has castellated connections on the long edge to go to the segments of the digit. They share a common positive 
 connection to 12 V, the negative connections for each segment of the digit, and the decimal point, which is used for the
 flashing colon on the clock.
 
